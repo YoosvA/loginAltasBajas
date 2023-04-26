@@ -22,6 +22,9 @@ Route::post('logear', [AuthController::class,'logear'])->name('logear');
 Route::get('/usuarioNuevo', [AuthController::class, 'agregarNuevo']);
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
+Route::get('/agregarUsuario', [AuthController::class, 'createUser']);
+Route::post('/agregarNuevo', [AuthController::class, 'agregarNuevo']);
+
 // Route::get('/inicio', [Clientes::class, 'index'])->name('inicio');
 
 

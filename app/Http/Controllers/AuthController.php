@@ -35,12 +35,20 @@ class AuthController extends Controller
         return redirect()->route('auth-login');
     }
 
-    public function agregarNuevo(){
+
+    public function createUser()
+    {
+        $titulo = 'Agregar Usuario';
+        $items = User::all();
+        return view('agregarUsuario', compact('titulo', 'items'));
+    }
+
+    public function agregarNuevo(Request $request){
         $item = new User();
-        $item->name = 'osvaldo';
-        $item->password = Hash::make('12345');
+        $item->name = $request->name;
+        $item->password = Hash::make($request->password);
         $item->save();
-        return $item;
+        return redirect('/');
 
     }
 }

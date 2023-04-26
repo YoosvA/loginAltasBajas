@@ -27,6 +27,9 @@
                                 <input type="password" class="form-control" name="password">
                                 <button class="btn btn mt-3" id="boton">Entrar</button>
                             </form>
+                            <div class="mt-2">
+                                <a href="/agregarUsuario">Agregar Usuario</a>
+                            </div>
                         </div>
                     </div>
                 </div>
